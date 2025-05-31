@@ -1,49 +1,62 @@
 .formContainer {
-  max-width: 400px;
-  margin: 50px auto;
-  padding: 30px;
-  border: 1px solid #ccc;
-  border-radius: 12px;
-  background-color: #f9f9f9;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  font-family: Arial, sans-serif;
+  max-width: 500px;
+  margin: 60px auto;
+  padding: 35px;
+  background-color: #232e23d7; 
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  font-family: 'Courier New', Courier, monospace;
+  background-image: url('/src/assets/grain-texture.png'); /* optional: subtle grain */
+  background-size: cover;
+  background-blend-mode: multiply;
+}
+
+.formContainer h1 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #fffefc;
+  text-align: center;
+  letter-spacing: 1px;
 }
 
 .formContainer label {
   display: block;
-  margin-top: 15px;
-  font-weight: bold;
-  color: #333;
+  margin-top: 18px;
+  font-weight: 600;
+  color: #fffefc;
+  font-size: 0.95rem;
 }
 
 .formContainer input[type="text"],
 .formContainer input[type="email"],
 .formContainer textarea {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   margin-top: 6px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
+  border: 1.5px solid #777;
+  border-radius: 6px;
+  background-color: #fffefc;
+  font-family: 'Courier New', Courier, monospace;
   box-sizing: border-box;
   resize: vertical;
+  color: #333;
 }
 
 .formContainer input[type="submit"] {
-  margin-top: 20px;
-  background-color: #157021bd;
-  color: white;
+  margin-top: 25px;
+  background-color: #3e4f3e;
+  color: #fffefc;
   border: none;
   padding: 12px 20px;
-  border-radius: 8px;
+  font-size: 1rem;
+  font-family: 'Courier New', Courier, monospace;
+  border-radius: 6px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.formContainer h1{
-    font-weight: bold;
-     color: black;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .formContainer input[type="submit"]:hover {
-  background-color: #0056b3;
+  background-color: #2e3d2e;
+  transform: scale(1.02);
 }

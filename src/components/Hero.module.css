@@ -1,0 +1,55 @@
+/* Hero.module.css */
+.heroContainer {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  font-family: "JetBrains Mono", monospace;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #e0e0e0;
+}
+
+.backgroundImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(4px) brightness(0.6);
+  z-index: 0;
+  user-select: none;
+  pointer-events: none;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.16);
+  z-index: 1;
+}
+
+.heroText {
+  position: relative;
+  font-size: 2.5rem;
+  font-weight: bold;
+  z-index: 3;
+}
+
+.cursor {
+  display: inline-block;
+  width: 1ch;
+  animation: blink 1s steps(2, start) infinite;
+  color: #38bdf8;
+}
+
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
