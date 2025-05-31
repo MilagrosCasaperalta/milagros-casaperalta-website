@@ -1,7 +1,7 @@
-import React, { useRef } from 'react';
-import emailjs from '@emailjs/browser';
-import styles from './ContactForm.module.css';
-
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
+import styles from "./ContactForm.module.css";
+import grainTexture from '../assets/grain-texture.png'; 
 export const ContactForm = () => {
   const form = useRef();
 
@@ -9,15 +9,15 @@ export const ContactForm = () => {
     e.preventDefault();
 
     emailjs
-      .sendForm('service_o1qlqvi', 'template_5cdzdxq', form.current, {
-        publicKey: 'xaCsDMKv35D4A7VL4',
+      .sendForm("service_o1qlqvi", "template_5cdzdxq", form.current, {
+        publicKey: "xaCsDMKv35D4A7VL4",
       })
       .then(
         () => {
-          console.log('SUCCESS!');
+          console.log("SUCCESS!");
         },
         (error) => {
-          console.log('FAILED...', error.text);
+          console.log("FAILED...", error.text);
         },
       );
   };
