@@ -1,7 +1,6 @@
-/* Header.module.css */
 .header {
-  background-color:	#0c1614;
-  color: rgb(255, 255, 255);
+  background-color: #0c1614;
+  color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -12,6 +11,17 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.logoLink {
+  display: flex;
+  align-items: center;
+}
+
+.logoImage {
+  height: 40px;
+  width: auto;
+  cursor: pointer;
 }
 
 .navList {
@@ -31,4 +41,10 @@
 
 .navItem:hover {
   color: #1b3b35;
+}
+
+.logoImage,
+.navItem {
+  display: block;
+  line-height: 2;
 }
