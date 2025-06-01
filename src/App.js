@@ -10,9 +10,16 @@ function App() {
   return (
     <div>
       <Header />
-      <Hero />
+      <div id = "home">
+          <Hero />
+      </div>
+    
+      <div id= "about me">
       <AboutTimeline />
-      <ContactForm />
+      </div>
+       <div id="contact">
+  <ContactForm />
+</div>
     </div>
   );
 }

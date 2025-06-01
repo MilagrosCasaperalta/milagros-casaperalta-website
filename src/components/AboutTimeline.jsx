@@ -3,7 +3,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import styles from './AboutTimeline.module.css';
 import studyImg from '../assets/2024-timeline.JPG';
 import startUni from '../assets/2020-timeline.jpeg';
-
+import moveToZurich from '../assets/2025-timeline.jpeg';
 
 const timelineData = [
   {
@@ -22,6 +22,7 @@ const timelineData = [
     year: '2025',
     title: 'Ready for a New Adventure',
     description: 'After careful consideration, I’ve decided to take the next step in my career by seeking new opportunities abroad, ideally in Zurich. Having covered my role as an R&D Software Engineer for almost a year, I now feel ready to move forward, join an international team, and contribute to real-world software products. I’m excited by the idea of working on scalable, high-impact systems, collaborating with developers from diverse backgrounds, and growing in a truly global and dynamic environment.',
+    image: moveToZurich,
   },
 ];
 

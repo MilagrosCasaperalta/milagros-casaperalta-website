@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-scroll";
 import styles from "./Header.module.css";
+import logo from "../assets/logo.png";
 
 const Header = () => {
   return (
@@ -10,13 +11,13 @@ const Header = () => {
           <ul className={styles.navList}>
             <li>
               <Link
-                to="home"
-                smooth={true}
-                duration={500}
-                className={styles.navItem}
-              >
-                Home
-              </Link>
+          to="home"
+          smooth={true}
+          duration={500}
+          className={styles.logoLink}
+        >
+          <img src={logo} alt="MC Logo" className={styles.logoImage} />
+        </Link>
             </li>
             <li>
               <Link
