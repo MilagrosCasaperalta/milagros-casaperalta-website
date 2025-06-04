@@ -1,4 +1,4 @@
-import logo from "./logo.svg";
+import logo from "./assets/logo.png";
 import "./App.css";
 
 import Hero from "./components/Hero";
