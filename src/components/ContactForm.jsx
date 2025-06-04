@@ -10,7 +10,7 @@ export const ContactForm = () => {
 
     emailjs
       .sendForm("service_o1qlqvi", "template_5cdzdxq", form.current, {
-        publicKey: "xaCsDMKv35D4A7VL4",
+        publicKey: process.env.REACT_APP_EMAILJS_PUBLIC_KEY,
       })
       .then(
         () => {
