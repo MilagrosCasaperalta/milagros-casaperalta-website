@@ -35,16 +35,24 @@
 }
 
 .navItem {
+  color: white;
+  text-decoration: none;
   cursor: pointer;
   transition: color 0.3s;
 }
 
 .navItem:hover {
   color: #1b3b35;
+  text-decoration: underline;
 }
 
 .logoImage,
 .navItem {
   display: block;
   line-height: 2;
+}
+
+
+.navItem:visited {
+  color: white;
 }
