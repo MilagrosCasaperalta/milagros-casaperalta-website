@@ -6,6 +6,10 @@ import Hero from "./components/Hero";
 import { ContactForm } from "./components/ContactForm";
 import Header from "./components/Header";
 import AboutTimeline from "./components/AboutTimeline";
+import Projects from "./pages/projects";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+
 
 function App() {
 
@@ -16,7 +20,9 @@ function App() {
 
 
   return (
-  <>
+     <Router>
+
+
       <CookieConsent
         location="bottom"
         buttonText="Accept"
@@ -28,6 +34,10 @@ function App() {
         This site uses cookies (Google Analytics) to enhance your experience.
       </CookieConsent>
 
+    <Routes>
+      <Route
+      path="/"
+      element={
       <div>
         <Header />
         <div id="home">
@@ -42,7 +52,13 @@ function App() {
           <ContactForm />
         </div>
       </div>
-    </>
+      }
+      />
+
+   <Route path="/wip" element={<Projects />} />
+
+    </Routes>
+    </Router>
   );
 }
 

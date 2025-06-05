@@ -1,5 +1,6 @@
 import React from "react";
-import { Link } from "react-scroll";
+import { Link as ScrollLink } from "react-scroll";
+import { Link as RouterLink } from "react-router-dom";
 import styles from "./Header.module.css";
 import logo from "../assets/logo.png";
 
@@ -10,44 +11,39 @@ const Header = () => {
         <nav>
           <ul className={styles.navList}>
             <li>
-              <Link
-          to="home"
-          smooth={true}
-          duration={500}
-          className={styles.logoLink}
-        >
-          <img src={logo} alt="MC Logo" className={styles.logoImage} />
-        </Link>
+              <ScrollLink
+                to="home"
+                smooth={true}
+                duration={500}
+                className={styles.logoLink}
+              >
+                <img src={logo} alt="MC Logo" className={styles.logoImage} />
+              </ScrollLink>
             </li>
             <li>
-              <Link
+              <ScrollLink
                 to="about me"
                 smooth={true}
                 duration={500}
                 className={styles.navItem}
               >
                 About Me
-              </Link>
+              </ScrollLink>
             </li>
             <li>
-              <Link
-                to="projects"
-                smooth={true}
-                duration={500}
-                className={styles.navItem}
-              >
+              <RouterLink to="/wip" className={styles.navItem}>
                 Projects
-              </Link>
+              </RouterLink>
             </li>
             <li>
-              <Link
+              <ScrollLink
                 to="contact"
                 smooth={true}
                 duration={500}
                 className={styles.navItem}
               >
                 Contact Me
-              </Link>
+              </ScrollLink>
             </li>
           </ul>
         </nav>
