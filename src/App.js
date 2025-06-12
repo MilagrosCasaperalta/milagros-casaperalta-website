@@ -68,7 +68,7 @@ useEffect(() => {
       }
       />
 
-   <Route path="/wip" element={<Projects />} />
+   <Route path="/projects" element={<Projects />} />
 
     </Routes>
     </Router>

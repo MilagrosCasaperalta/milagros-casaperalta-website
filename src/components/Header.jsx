@@ -31,7 +31,7 @@ const Header = () => {
               </ScrollLink>
             </li>
             <li>
-              <RouterLink to="/wip" className={styles.navItem}>
+              <RouterLink to="/projects" className={styles.navItem}>
                 Projects
               </RouterLink>
             </li>
