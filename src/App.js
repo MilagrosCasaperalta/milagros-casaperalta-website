@@ -1,5 +1,6 @@
 import "./App.css";
 import React, { useEffect } from "react";
+import axios from "axios";
 import ReactGA from "react-ga4";
 import CookieConsent from "react-cookie-consent";
 import Hero from "./components/Hero";
@@ -13,10 +14,22 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
 
-    useEffect(() => {
-    ReactGA.initialize(process.env.REACT_APP_GA_MEASUREMENT_ID);
-    ReactGA.send("pageview");
-  }, []);
+ 
+useEffect(() => {
+
+  // Google Analytics
+  ReactGA.initialize(process.env.REACT_APP_GA_MEASUREMENT_ID);
+  ReactGA.send("pageview");
+
+  // FastAPI call
+  axios.get("https://my-website-api-c80g.onrender.com")
+    .then((res) => {
+      console.log("FastAPI response:", res.data);
+    })
+    .catch((err) => {
+      console.error("FastAPI error:", err);
+    });
+}, []);
 
 
   return (

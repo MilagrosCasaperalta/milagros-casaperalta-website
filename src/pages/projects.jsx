@@ -1,14 +1,31 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import styles from "./projects.module.css";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
-const Projects = () => {
-  return (
-    <div className={styles.container}>
-      <h1 className={styles.title}>Work in Progress...</h1>
-      <Link to="/" className={styles.link}>Home</Link>
-    </div>
-  );
-};
+function Projects() {
+    const [projects, setProjects] = useState([]);
+
+    useEffect(() => {
+        axios.get("http://localhost:8000/projects")
+            .then(res => setProjects(res.data))
+            .catch(err => console.error("Failed to fetch projects:", err));
+    }, []);
+
+    return (
+        <div className="projects">
+            <h2>My Projects</h2>
+            <ul>
+                {projects.map(project => (
+                    <li key={project.id}>
+                        <h3>{project.title}</h3>
+                        <p>{project.description}</p>
+                        <a href={project.link} target="_blank" rel="noopener noreferrer">
+                            Visit
+                        </a>
+                    </li>
+                ))}
+            </ul>
+        </div>
+    );
+}
 
 export default Projects;
