@@ -22,7 +22,7 @@ useEffect(() => {
   ReactGA.send("pageview");
 
   // FastAPI call
-  axios.get("https://my-website-api-c80g.onrender.com")
+  axios.get("https://my-website-api-c80g.onrender.com/projects")
     .then((res) => {
       console.log("FastAPI response:", res.data);
     })
