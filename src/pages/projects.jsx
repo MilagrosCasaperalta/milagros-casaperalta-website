@@ -5,7 +5,7 @@ function Projects() {
     const [projects, setProjects] = useState([]);
 
     useEffect(() => {
-        axios.get("http://localhost:8000/projects")
+        axios.get("https://my-website-api-c80g.onrender.com/projects")
             .then(res => setProjects(res.data))
             .catch(err => console.error("Failed to fetch projects:", err));
     }, []);
